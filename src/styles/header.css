@@ -1,42 +1,51 @@
-.debut{
+.debut {
   background-image: url("../assets/background-smart-travel.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 300px;
   position: relative;
-}
-
-.logo{
-  width: 120px
-}
-
-.nav{
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center; /* Centre les éléments horizontalement */
 }
 
-.header{
-  padding: 10px 0
+.logo {
+  width: 150px;
+  position: absolute; /* Positionne le logo par rapport à la balise parent */
+  top: 10px; /* Ajustez pour positionner le logo verticalement */
+  left: 10px; /* Positionne le logo à gauche */
+}
+
+.header {
+  display: flex;
+  justify-content: center; /* Centre horizontalement les éléments dans .header */
+  width: 100%;
+  padding: 10px 0;
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  justify-content: center; /* Centre les éléments de la navigation horizontalement */
+  width: 100%;
 }
 
 .searchbar {
   position: absolute;
-  bottom: 10px; /* ajuster la valeur pour le placer plus ou moins près du bas */
+  bottom: 10px; /* Ajustez pour placer la barre de recherche plus ou moins près du bas */
   left: 50%;
-  transform: translateX(-50%); /* pour centrer horizontalement */
+  transform: translateX(-50%); /* Centre horizontalement */
 }
 
 .searchbar input {
-  width: 700px; /* Changez cette valeur pour ajuster la largeur */
+  width: 700px; /* Ajustez la largeur de la barre de recherche */
   height: 40px; /* Ajustez la hauteur */
-
   font-size: 16px; /* Ajustez la taille de la police */
   border-radius: 5px; /* Pour arrondir les coins si désiré */
-  border: 1px solid #ccc; /* Pour ajouter une bordure */
+  border: 1px solid #ccc; /* Bordure pour la barre de recherche */
   box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur et la hauteur */
 }
-
 
 .nav-item {
   display: flex;
@@ -55,7 +64,6 @@
   font-size: 14px; /* Taille du texte */
 }
 
-
-.slogan{
+.slogan {
   font-size: 50px;
 }
