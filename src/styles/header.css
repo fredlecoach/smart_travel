@@ -1,0 +1,61 @@
+.debut{
+  background-image: url("../assets/background-smart-travel.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+  position: relative;
+}
+
+.logo{
+  width: 120px
+}
+
+.nav{
+  display: flex;
+  justify-content: space-around;
+}
+
+.header{
+  padding: 10px 0
+}
+
+.searchbar {
+  position: absolute;
+  bottom: 10px; /* ajuster la valeur pour le placer plus ou moins près du bas */
+  left: 50%;
+  transform: translateX(-50%); /* pour centrer horizontalement */
+}
+
+.searchbar input {
+  width: 700px; /* Changez cette valeur pour ajuster la largeur */
+  height: 40px; /* Ajustez la hauteur */
+
+  font-size: 16px; /* Ajustez la taille de la police */
+  border-radius: 5px; /* Pour arrondir les coins si désiré */
+  border: 1px solid #ccc; /* Pour ajouter une bordure */
+  box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur et la hauteur */
+}
+
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.nav-icon {
+  font-size: 24px; /* Taille de l'icône */
+  margin-bottom: 5px; /* Espace entre l'icône et le texte */
+}
+
+.nav-text {
+  font-size: 14px; /* Taille du texte */
+}
+
+
+.slogan{
+  font-size: 50px;
+}
