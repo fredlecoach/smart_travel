@@ -18,7 +18,7 @@ function Destination() {
       <div className="row row-cols-1 row-cols-lg-2">
         {voyages.map((voyage) => (
           <div key={voyage.id} className="col mb-4">
-            <a href="#" className="text-decoration-none">
+            <a  className="text-decoration-none">
               <div className="card" >
                 <img src={voyage.image} className="card-img-top w-100 h-100" alt={voyage.name} />
                 <div className="card-body">
