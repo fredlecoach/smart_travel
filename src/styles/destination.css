@@ -1,0 +1,16 @@
+.panier {
+  position: fixed;
+  top: 20px; /* Ajustez selon l'espacement désiré */
+  right: 20px; /* Ajustez selon l'espacement désiré */
+  background-color: white; /* Optionnel : couleur de fond pour le panier */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optionnel : ajouter une ombre pour plus de visibilité */
+  z-index: 1000; /* Assurez-vous que le panier reste au-dessus d'autres éléments */
+}
+
+.bouton{
+  background-color: #cb2151;
+  color: #fff
+}
