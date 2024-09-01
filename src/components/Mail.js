@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "../styles/mail.css"
 
 function EmailForm() {
     const [inputValue, setInputValue] = useState('');
@@ -32,7 +33,7 @@ function EmailForm() {
     }
 
     return (
-        <div className='text-center mail'>
+        <div className='text-center mail mt-5'>
             <h3>Recevez nos dernières offres en avant-première</h3>
             <form onSubmit={handleSubmit}>
                 <input
