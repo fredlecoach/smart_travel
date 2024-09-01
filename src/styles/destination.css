@@ -14,3 +14,8 @@
   background-color: #cb2151;
   color: #fff
 }
+
+.bouton:hover{
+  background-color: #b74666;
+  color: #fff;
+}
