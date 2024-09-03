@@ -1,7 +1,12 @@
 import "../styles/header.css"; // Importation du fichier CSS
 import logo from "../assets/logo2.png";
+import { SearchContext } from "./searchContext";
+import {  useContext } from "react";
 
 function Header() {
+  // on passe les infos de recherche
+  const { search, setSearch } = useContext(SearchContext);
+
   return (
     <>
       <div className="debut text-light">
@@ -28,9 +33,9 @@ function Header() {
           </ul>
         </div>
         <h3 className="text-center slogan" style={{ fontFamily: "Caveat"}}>Faites place à l'évasion</h3>
-        <form>
+        <form onSubmit={(e) => e.preventDefault() }>
           <div className="searchbar">
-            <input type="text" placeholder="Destination (pays, région, ville)" className="p-4" />
+            <input type="text" placeholder="Destination (pays, région, ville)" className="p-4" value={search} onChange={(e) => setSearch(e.target.value)} />
             <button type="submit" className="btn btn-light mx-2">Rechercher</button>
           </div>
         </form>

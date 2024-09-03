@@ -1,14 +1,57 @@
+// App.js
 import Header from './Head';
-import Destination from "./Destination"
-import EmailForm from "./Mail"
+import Destination from "./Destination";
+import EmailForm from "./Mail";
+import { SearchProvider } from "./searchContext";
+import Panier from './Panier';
+import { useState } from 'react';
 
 function App() {
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
+  const [voyages, setVoyages] = useState([]); // Définir comme tableau
+
+  const addToCart = (voyage) => {
+    setVoyages(prevVoyages => {
+      const voyageExists = prevVoyages.find(v => v.id === voyage.id);
+      if (voyageExists) {
+        return prevVoyages.map(v => 
+          v.id === voyage.id
+            ? { ...v, quantity: v.quantity + 1 }
+            : v
+        );
+      } else {
+        return [...prevVoyages, { ...voyage, quantity: 1 }];
+      }
+    });
+    setTotalPrice(prevPrice => prevPrice + voyage.price);
+  };
+
+  const clearCart = () => {
+    setTotalPrice(0);
+    setVoyages([]);
+  };
+
   return (
-    <>
+    <SearchProvider>
       <Header />
+      <Panier 
+        totalPrice={totalPrice} 
+        setTotalPrice={setTotalPrice} 
+        isOpen={isOpen} 
+        setIsOpen={setIsOpen} 
+        voyages={voyages} 
+        clearCart={clearCart} // Passer la fonction clearCart comme prop
+      />
       <EmailForm />
-      <Destination />
-    </>
+      <Destination 
+        totalPrice={totalPrice} 
+        setTotalPrice={setTotalPrice} 
+        isOpen={isOpen} 
+        setIsOpen={setIsOpen} 
+        addToCart={addToCart} 
+      />
+    </SearchProvider>
   );
 }
 
