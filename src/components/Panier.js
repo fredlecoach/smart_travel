@@ -31,7 +31,7 @@ function Panier({ totalPrice, setTotalPrice, isOpen, setIsOpen, voyages, clearCa
     ) : (
       <div className="mt-4 close-cart">
         <button className="btn bouton" onClick={() => setIsOpen(true)}>
-          Mon panier <i className="bi bi-basket fs-4"></i>
+          <i className="bi bi-basket fs-4"></i> panier 
         </button>
       </div>
     )
