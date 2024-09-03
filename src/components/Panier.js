@@ -20,18 +20,18 @@ function Panier({ totalPrice, setTotalPrice, isOpen, setIsOpen, voyages, clearCa
           </p>
         </div>
         <h3>Prix total: {totalPrice} €</h3>
-        <button className="btn bouton" onClick={() => setIsOpen(false)}>
-          Fermer le panier <i className="bi bi-basket2"></i>
+        <button className="btn btn-warning" onClick={() => setIsOpen(false)}>
+          Fermer 
         </button>
-        <br />
-        <button className="btn btn-warning mt-1" onClick={clearCart}>
-          Vider le panier <i className="bi bi-basket3"></i>
+        {/* <br /> */}
+        <button className="btn btn-danger mx-1" onClick={clearCart}>
+          Vider <i className="bi bi-basket3 fs-4"></i>
         </button>
       </div>
     ) : (
       <div className="mt-4 close-cart">
         <button className="btn bouton" onClick={() => setIsOpen(true)}>
-          Mon panier <i className="bi bi-basket2"></i>
+          Mon panier <i className="bi bi-basket fs-4"></i>
         </button>
       </div>
     )
