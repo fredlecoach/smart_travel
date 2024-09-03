@@ -43,7 +43,15 @@ function Destination({ totalPrice, setTotalPrice, isOpen, setIsOpen, addToCart }
                 <p className="card-text">{voyage.description} - {voyage.country}</p>
                 <small>{voyage.duree} jours - {voyage.price} €</small>
                 <br />
-                <button className="btn bouton" onClick={() => addToCart(voyage)}>Ajouter au panier</button>
+                <button 
+                  className="btn bouton" 
+                  onClick={() => {
+                    alert(`Vous avez ajouté la destination de " ${voyage.name} " à votre panier`);
+                    addToCart(voyage);
+                  }}
+                >
+                  Ajouter au panier
+                </button>
               </div>
             </div>
           </div>
