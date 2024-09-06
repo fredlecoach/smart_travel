@@ -4,12 +4,17 @@ import { useState, useEffect } from 'react';
 function Panier({ totalPrice, setTotalPrice, isOpen, setIsOpen, voyages, clearCart }) {
   const [isClearing, setIsClearing] = useState(false);
 
+  // Effet pour gérer la confirmation avant de vider le panier
   useEffect(() => {
     if (isClearing) {
-      alert(`Vous êtes sur le point de vider votre panier`);
-      setIsClearing(false); // Réinitialiser l'état pour ne pas afficher l'alerte à chaque fois qu ele panier est vider
+      const confirmClear = window.confirm('Vous êtes sur le point de vider votre panier. Voulez-vous continuer ?');
+
+      if (confirmClear) {
+        clearCart(); // Appeler la fonction pour vider le panier
+      }
+      setIsClearing(false); // Réinitialiser l'état après la confirmation
     }
-  }, [isClearing]);
+  }, [isClearing, clearCart]);
 
   return (
     isOpen ? (
@@ -36,7 +41,7 @@ function Panier({ totalPrice, setTotalPrice, isOpen, setIsOpen, voyages, clearCa
           className="btn btn-danger mx-1"
           onClick={() => {
             setIsClearing(true); // Déclencher l'état pour afficher l'alerte
-            clearCart(); // Appeler la fonction pour vider le panier
+            // clearCart(); // Appeler la fonction pour vider le panier
           }}
         >
           Vider <i class="bi bi-trash3"></i>
