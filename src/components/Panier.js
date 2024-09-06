@@ -30,7 +30,7 @@ function Panier({ totalPrice, setTotalPrice, isOpen, setIsOpen, voyages, clearCa
         </div>
         <h3>Prix total : {totalPrice} €</h3>
         <button className="btn btn-warning" onClick={() => setIsOpen(false)}>
-          Fermer 
+          Fermer <i class="bi bi-x-circle"></i>
         </button>
         <button
           className="btn btn-danger mx-1"
@@ -39,7 +39,7 @@ function Panier({ totalPrice, setTotalPrice, isOpen, setIsOpen, voyages, clearCa
             clearCart(); // Appeler la fonction pour vider le panier
           }}
         >
-          Vider <i className="bi bi-basket3 fs-4"></i>
+          Vider <i class="bi bi-trash3"></i>
         </button>
       </div>
     ) : (
