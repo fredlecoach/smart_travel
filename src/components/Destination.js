@@ -7,7 +7,7 @@ import "../styles/destination.css";
 import { SearchContext } from "./searchContext";
 import {useContext} from 'react'
 
-function Destination({ totalPrice, setTotalPrice, isOpen, setIsOpen, addToCart }) {
+function Destination({ totalPrice, setTotalPrice, isOpen, setIsOpen, addToCart, favorites, setFavorites, toggleFavorite }) {
   const voyages = [
     { id: 1, name: 'Paris', country: 'France', duree: 3, price: 450, description: 'Magnifique paysage du terroir', image: paris },
     { id: 2, name: 'New York', country: 'USA', duree: 7, price: 800, description: 'Ville qui ne dort jamais', image: newyork },
@@ -29,6 +29,14 @@ function Destination({ totalPrice, setTotalPrice, isOpen, setIsOpen, addToCart }
   if (filteredVoyages.length === 0) {
     return <div className="d-flex justify-content-center mt-5"><p className="">Aucun résultat pour cette destination !</p></div>;
   }
+
+
+
+  // useEffect(
+  //   ()=>{
+  //     document.getElementById(heart-icon).color = #2151
+  //   }, [isFavorite]
+  // )
   
 
   return (
@@ -37,21 +45,39 @@ function Destination({ totalPrice, setTotalPrice, isOpen, setIsOpen, addToCart }
         {filteredVoyages.map((voyage) => (
           <div key={voyage.id} className="col mb-4">
             <div className="card">
-              <img src={voyage.image} className="card-img-top w-100 h-100" alt={voyage.name} />
-              <div className="card-body">
-                <h5 className="card-title">{voyage.name}</h5>
-                <p className="card-text">{voyage.description} - {voyage.country}</p>
-                <small>{voyage.duree} jours - {voyage.price} €</small>
+              {/* positionner l'icone coeur */}
+              <div className="image-container position-relative">
+                <img src={voyage.image} className="card-img-top w-100 h-100" alt={voyage.name} />
+                <i
+                  className={`bi heart-icon position-absolute fs-3 ${favorites.includes(voyage.id) ? 'bi-balloon-heart-fill heart-icon-favorite' : 'bi-balloon-heart'}`}
+                  onClick={() => toggleFavorite(voyage.id)}
+                  style={{ cursor: 'pointer' }}
+                ></i>
+
+              </div>
+              {/* fin de positionnement */}
+              <div>
+                <div className="row m-2">
+                  <div className="col-8 rebord-right">
+                    <h5 className="card-title">{voyage.name}</h5>
+                    <p className="card-text">{voyage.description} - {voyage.country}</p>
+                  </div>
+                  <div className="col-4 justify-content-end d-flex">
+                    <p>{voyage.duree} jours - <span className="fw-bold fs-4">{voyage.price} €</span></p>
+                  </div>
+                </div>
                 <br />
-                <button 
-                  className="btn bouton" 
-                  onClick={() => {
-                    alert(`Vous avez ajouté la destination de " ${voyage.name} " à votre panier`);
-                    addToCart(voyage);
-                  }}
-                >
-                  Ajouter au panier
-                </button>
+                <div className="bg-light border-top">
+                  <button 
+                    className="btn bouton m-2" 
+                    onClick={() => {
+                      alert(`Vous avez ajouté la destination de " ${voyage.name} " à votre panier`);
+                      addToCart(voyage);
+                    }}
+                  >
+                    Ajouter au panier
+                  </button>
+                </div>
               </div>
             </div>
           </div>

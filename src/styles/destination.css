@@ -9,3 +9,30 @@
   background-color: #b74666;
   color: #fff;
 }
+
+.rebord-right{
+  border-right: 1px #cb2151 solid
+}
+.rebord-top{
+  border-top: 1px #cb2151 solid
+}
+
+.image-container {
+  position: relative;
+  width: 100%; /* ou la taille de votre image */
+  height: auto;
+}
+
+.heart-icon {
+  position: absolute;
+  top: 20px;  /* Ajustez cette valeur selon l'espacement désiré */
+  right: 20px;  /* Ajustez cette valeur selon l'espacement désiré */
+  color: #fff
+}
+
+.heart-icon:hover{
+  color: #cb2151
+}
+.heart-icon-favorite{
+  color: #cd2151
+}

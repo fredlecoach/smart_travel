@@ -10,6 +10,17 @@ function App() {
   const [totalPrice, setTotalPrice] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [voyages, setVoyages] = useState([]); // Définir comme tableau
+  const [favorites,setFavorites] = useState([]); // définir les favoris
+
+
+    // Fonction pour gérer le clic sur l'icône cœur
+    const toggleFavorite = (id) => {
+      setFavorites((prevFavorites) =>
+        prevFavorites.includes(id)
+          ? prevFavorites.filter((favId) => favId !== id) // Retire des favoris
+          : [...prevFavorites, id] // Ajoute aux favoris
+      );
+    };
 
   const addToCart = (voyage) => {
     setVoyages(prevVoyages => {
@@ -50,6 +61,9 @@ function App() {
         isOpen={isOpen} 
         setIsOpen={setIsOpen} 
         addToCart={addToCart} 
+        favorites={favorites}
+        setFavorites={setFavorites}
+        toggleFavorite={toggleFavorite}
       />
     </SearchProvider>
   );
