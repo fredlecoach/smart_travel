@@ -60,7 +60,7 @@ function Destination({ totalPrice, setTotalPrice, isOpen, setIsOpen, addToCart, 
                 <div className="row m-2">
                   <div className="col-8 rebord-right">
                     <h5 className="card-title">{voyage.name}</h5>
-                    <p className="card-text">{voyage.description} - {voyage.country}</p>
+                    <p className="card-text">{voyage.country}</p>
                   </div>
                   <div className="col-4 justify-content-end d-flex">
                     <p>{voyage.duree} jours - <span className="fw-bold fs-4">{voyage.price} €</span></p>
