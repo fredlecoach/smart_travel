@@ -67,3 +67,33 @@
 .slogan {
   font-size: 50px;
 }
+
+.nav-color{
+  color: #fff;
+  text-decoration: none;
+  padding-bottom: 5px
+}
+.nav-color:hover {
+  color: #c93838; /* Change la couleur au survol */
+  /* border-bottom: #c93838 2px solid;  */
+}
+
+
+@media   (max-width: 900px) {
+
+  .slogan{
+    /* display: none; */
+    font-size: 40px
+  }
+
+  
+}
+@media   (max-width: 425px) {
+
+  .slogan{
+    display: none;
+    /* font-size: 40px */
+  }
+
+  
+}

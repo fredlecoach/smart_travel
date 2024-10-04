@@ -24,7 +24,9 @@ function Destination({ totalPrice, setTotalPrice, isOpen, setIsOpen, addToCart, 
     voyage.name.toLowerCase().includes(search.toLowerCase()) ||
     voyage.country.toLowerCase().includes(search.toLowerCase())
   );
+
   
+
   // Vérifie si le tableau est vide
   if (filteredVoyages.length === 0) {
     return <div className="d-flex justify-content-center mt-5"><p className="">Aucun résultat pour cette destination !</p></div>;
@@ -48,11 +50,20 @@ function Destination({ totalPrice, setTotalPrice, isOpen, setIsOpen, addToCart, 
               {/* positionner l'icone coeur */}
               <div className="image-container position-relative">
                 <img src={voyage.image} className="card-img-top w-100 h-100" alt={voyage.name} />
+
                 <i
                   className={`bi heart-icon position-absolute fs-3 ${favorites.includes(voyage.id) ? 'bi-balloon-heart-fill heart-icon-favorite' : 'bi-balloon-heart'}`}
-                  onClick={() => toggleFavorite(voyage.id)}
+                  onClick={() => {
+                    const confirmed = window.confirm(`Voulez-vous ajouter ${voyage.name} à vos favoris ?`);
+                    if (confirmed) {
+                      toggleFavorite(voyage.id);
+                    }
+                  }}
                   style={{ cursor: 'pointer' }}
+                  aria-label={favorites.includes(voyage.id) ? "Retirer des favoris" : "Ajouter aux favoris"}
                 ></i>
+
+
 
               </div>
               {/* fin de positionnement */}

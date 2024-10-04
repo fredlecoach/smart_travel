@@ -11,10 +11,17 @@
 }
 .close-cart {
   position: fixed;
-  top: 20px; /* Ajustez selon l'espacement désiré */
+  top: 0px; /* Ajustez selon l'espacement désiré */
   right: 20px; /* Ajustez selon l'espacement désiré */
   border: 1px solid #ccc;
   
   z-index: 1000; /* Assurez-vous que le panier reste au-dessus d'autres éléments */
+}
+
+@media screen and (max-width: 900px) {
+  .close-cart {
+    top: 50px;
+    right: 10px
+  }
 }
 
