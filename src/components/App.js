@@ -7,6 +7,7 @@ import Panier from './Panier';
 import { useState } from 'react';
 import Compte from './Compte';
 import Favoris from './Favoris';
+import Reservations from './Reservations';
 
 function App() {
   const [totalPrice, setTotalPrice] = useState(0);
@@ -56,6 +57,7 @@ function App() {
         favorites={favorites}
         addToCart={addToCart}
         />} />
+        <Route path="/reservations" element={ <Reservations />} />
         <Route path="/" element={ <Destination 
         totalPrice={totalPrice} 
         setTotalPrice={setTotalPrice} 

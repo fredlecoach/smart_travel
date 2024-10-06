@@ -50,10 +50,12 @@ function Header() {
                 </Link>
               </li>
               <li className="nav-item">
-                <div className="nav-icon">
-                  <i className="fa-solid fa-briefcase"></i>
-                </div>
-                <div className="nav-text">Réservations</div>
+                <Link to="/reservations" className="nav-color">
+                  <div className="nav-icon">
+                    <i className="fa-solid fa-briefcase"></i>
+                  </div>
+                  <div className="nav-text">Réservations</div>
+                </Link>
               </li>
               <li className="nav-item">
                 <Link to="/compte" className="nav-color"> {/* Utilisation de d-flex pour aligner l'icône et le texte */}
