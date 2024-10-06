@@ -42,10 +42,12 @@ function Header() {
                 
               </li>
               <li className="nav-item">
-                <div className="nav-icon">
-                  <i className="fa-solid fa-heart"></i>
-                </div>
-                <div className="nav-text">Favoris</div>
+                <Link to="/favoris" className="nav-color">
+                  <div className="nav-icon">
+                    <i className="fa-solid fa-heart"></i>
+                  </div>
+                  <div className="nav-text">Favoris</div>
+                </Link>
               </li>
               <li className="nav-item">
                 <div className="nav-icon">

@@ -6,6 +6,7 @@ import { SearchProvider } from "./searchContext";
 import Panier from './Panier';
 import { useState } from 'react';
 import Compte from './Compte';
+import Favoris from './Favoris';
 
 function App() {
   const [totalPrice, setTotalPrice] = useState(0);
@@ -51,6 +52,10 @@ function App() {
       <EmailForm />
       <Routes>
         <Route path="/compte" element={<Compte />} />
+        <Route path="/favoris" element= { <Favoris 
+        favorites={favorites}
+        addToCart={addToCart}
+        />} />
         <Route path="/" element={ <Destination 
         totalPrice={totalPrice} 
         setTotalPrice={setTotalPrice} 
