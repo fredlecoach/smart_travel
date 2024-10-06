@@ -8,6 +8,7 @@ import { useState } from 'react';
 import Compte from './Compte';
 import Favoris from './Favoris';
 import Reservations from './Reservations';
+import Footer from './Footer';
 
 function App() {
   const [totalPrice, setTotalPrice] = useState(0);
@@ -71,6 +72,7 @@ function App() {
       </Routes>
 
       </Router>
+      <Footer />
       <Panier 
         totalPrice={totalPrice} 
         setTotalPrice={setTotalPrice} 

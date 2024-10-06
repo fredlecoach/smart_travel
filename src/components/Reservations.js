@@ -1,7 +1,7 @@
 export default function Reservations(){
   return (
-    <div className="container">
-      <h1>Voyages réservés</h1>
+    <div className="container mt-5">
+      <h1 style={{ color: 'red'}} >Mes voyages</h1>
       <table className="table table-striped">
         <thead>
           <tr>
