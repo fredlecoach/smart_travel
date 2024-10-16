@@ -8,6 +8,7 @@ import { useState } from 'react';
 import Compte from './Compte';
 import Favoris from './Favoris';
 import Reservations from './Reservations';
+import Aide from './Aide';
 import Footer from './Footer';
 
 function App() {
@@ -69,6 +70,7 @@ function App() {
         setFavorites={setFavorites}
         toggleFavorite={toggleFavorite}
       />} />
+      <Route path="/aide" element={<Aide />} />
       </Routes>
 
       </Router>

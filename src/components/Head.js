@@ -65,6 +65,14 @@ function Header() {
                   <div className="nav-text ms-2">Mon compte</div> {/* ms-2 pour ajouter un espace entre l'icône et le texte */}
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link to="/aide" className="nav-color">
+                <div className="nav-icon">
+                  <i className="fa-solid fa-circle-question"></i>
+                </div>
+                <div className="nav-text">Aide</div>
+                </Link>
+              </li>
 
             </ul>
           </div>
