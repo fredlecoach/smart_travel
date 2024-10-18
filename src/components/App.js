@@ -10,6 +10,7 @@ import Favoris from './Favoris';
 import Reservations from './Reservations';
 import Aide from './Aide';
 import Footer from './Footer';
+import RestaurantList from './Restaurant';
 
 function App() {
   const [totalPrice, setTotalPrice] = useState(0);
@@ -81,6 +82,8 @@ function App() {
         favorites={favorites}
         addToCart={addToCart}
         />} />
+
+        <Route path="/restaurants" element={<RestaurantList />} />
         
         <Route path="/reservations" element={ <Reservations 
         reservations={reservations}
