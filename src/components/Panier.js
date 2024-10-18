@@ -1,7 +1,7 @@
 import "../styles/panier.css";
 import { useState, useEffect } from 'react';
 
-function Panier({ totalPrice, setTotalPrice, isOpen, setIsOpen, voyages, clearCart }) {
+function Panier({ totalPrice, isOpen, setIsOpen, voyages, clearCart }) {
   const [isClearing, setIsClearing] = useState(false);
 
   // Effet pour gérer la confirmation avant de vider le panier

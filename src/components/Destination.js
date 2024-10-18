@@ -9,11 +9,11 @@ import {useContext} from 'react'
 
 function Destination({ totalPrice, setTotalPrice, isOpen, setIsOpen, addToCart, favorites, setFavorites, toggleFavorite }) {
   const voyages = [
-    { id: 1, name: 'Paris', country: 'France', duree: 3, price: 450, description: 'Magnifique paysage du terroir', image: paris },
-    { id: 2, name: 'New York', country: 'USA', duree: 7, price: 800, description: 'Ville qui ne dort jamais', image: newyork },
-    { id: 3, name: 'Tokyo', country: 'Japan', duree: 10, price: 1200, description: 'Une fusion de la tradition et de la modernité', image: tokyo },
-    { id: 4, name: 'Londres', country: 'Angleterre', duree: 5, price: 590, description: 'Ville historique avec une touche contemporaine', image: londres },
-    { id: 5, name: 'Montréal', country: 'Canada', duree: 12, price: 930, description: 'Ville bilingue avec une culture riche', image: montreal },
+    { id: 1, name: 'Paris', country: 'France', duree: 3, price: 450, description: 'Magnifique paysage du terroir', image: paris, departTime: '19h00', arrivalTime: '23h00' },
+    { id: 2, name: 'New York', country: 'USA', duree: 7, price: 800, description: 'Ville qui ne dort jamais', image: newyork, departTime: '19h00', arrivalTime: '23h00' },
+    { id: 3, name: 'Tokyo', country: 'Japan', duree: 10, price: 1200, description: 'Une fusion de la tradition et de la modernité', image: tokyo, departTime: '19h00', arrivalTime: '23h00' },
+    { id: 4, name: 'Londres', country: 'Angleterre', duree: 5, price: 590, description: 'Ville historique avec une touche contemporaine', image: londres, departTime: '19h00', arrivalTime: '23h00' },
+    { id: 5, name: 'Montréal', country: 'Canada', duree: 12, price: 930, description: 'Ville bilingue avec une culture riche', image: montreal, departTime: '19h00', arrivalTime: '23h00' },
   ];
 
 

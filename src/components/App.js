@@ -16,6 +16,26 @@ function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [voyages, setVoyages] = useState([]); // Définir comme tableau
   const [favorites,setFavorites] = useState([]); // définir les favoris
+  const [reservations, setReservations] = useState([]);
+
+  const addReservation = (voyage) => {
+    setReservations((prevReservations) => {
+      const isReserved = prevReservations.find(
+        (reservation) => reservation.id === voyage.id
+      )
+
+      if (!isReserved){
+        // si la reservation n'existe pas, on l'ajoute
+        return [...prevReservations, {...voyage, passengers: 1 }];
+      }
+      // si la reservation existe, on incrémente le nombre de passagers pour la mettre à jour
+      return prevReservations.map(
+        (reservation) => reservation.id === voyage.id ? {...reservation, passengers: reservation.passengers + 1 } : reservation
+      )
+    }
+    
+    )
+  }
 
 
     // Fonction pour gérer le clic sur l'icône cœur
@@ -41,6 +61,8 @@ function App() {
       }
     });
     setTotalPrice(prevPrice => prevPrice + voyage.price);
+
+    addReservation(voyage)
   };
 
   const clearCart = () => {
@@ -59,7 +81,12 @@ function App() {
         favorites={favorites}
         addToCart={addToCart}
         />} />
-        <Route path="/reservations" element={ <Reservations />} />
+        
+        <Route path="/reservations" element={ <Reservations 
+        reservations={reservations}
+        setReservations={setReservations}
+        />} />
+
         <Route path="/" element={ <Destination 
         totalPrice={totalPrice} 
         setTotalPrice={setTotalPrice} 

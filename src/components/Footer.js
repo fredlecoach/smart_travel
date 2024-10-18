@@ -33,3 +33,43 @@ export default function Footer(){
     </>
   )
 }
+
+// const restaurants = [
+//   {
+//     id: 1, // Ajout d'une propriété "id" pour chaque objet
+//     name: "Le restaurant de la mer",
+//     address: "12 rue de la mer",
+//     place: "Paris",
+//     phone: "01 23 45 67 89",
+//     email: "restaurant@mer.com",
+//     stars: "🌟🌟🌟" // Changer "star" en "stars" pour rester cohérent
+//   },
+//   {
+//     id: 2,
+//     name: "Le restaurant de la montagne",
+//     address: "12 rue de la montagne",
+//     place: "Paris",
+//     phone: "01 23 45 67 89",
+//     email: "restaurant@montagne.com",
+//     stars: "🌟🌟🌟"
+//   }
+// ];
+
+// export function RestaurantList() {
+//   return (
+//     <div>
+//       {restaurants.map((resto) => (
+//         <ul key={resto.name}>
+//           <li>Nom : {resto.name}</li>
+//           <li>Étoiles : {resto.stars}</li>
+//           <li>Lieu : {resto.place}</li>
+//           <li>Adresse : {resto.address}</li>
+//           <li>Téléphone : {resto.phone}</li>
+//           <li>Email : {resto.email}</li>
+//         </ul>
+//       ))}
+//     </div>
+//   );
+// }
+
+
