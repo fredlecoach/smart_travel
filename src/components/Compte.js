@@ -1,6 +1,7 @@
 import cj from '../assets/cj.jpeg'
+import PropTypes from 'prop-types'
 
-export default function Compte(){
+export default function Compte({name, surname, mail, phone, adresse}){
   return (
     <div className="container mt-5">
       <div class="card" style={{width: '25rem'}}>
@@ -18,4 +19,21 @@ export default function Compte(){
     </div>
       
   )
+}
+
+Compte.propTypes = {
+  name: PropTypes.string.isRequired,
+  surname: PropTypes.string.isRequired,
+  mail: PropTypes.string.isRequired,
+  phone: PropTypes.number.isRequired,
+  adresse: PropTypes.string.isRequired
+
+}
+
+Compte.defaultProps = {
+  name: 'À compléter',
+  surname: 'À compléter',
+  mail: 'À compléter',
+  phone: 'À compléter',
+  adresse: 'À compléter'
 }

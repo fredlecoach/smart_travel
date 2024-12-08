@@ -25,7 +25,8 @@ export default function Footer(){
       </div>
           {/* lien restaurants */}
       <div className="col d-flex justify-content-center flex-column text-center">
-        <StyledA href="/restaurants" className='text-decoration-none'>Nos restaurants</StyledA>
+        <h5>Nos bonnes adresses <i class="bi bi-compass"></i></h5>
+        <StyledA href="/restaurants" className='text-decoration-none'>Nos restaurants <i class="bi bi-map"></i></StyledA>
       </div>
     </div>
     

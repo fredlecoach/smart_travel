@@ -54,7 +54,7 @@ const restaurants = [
     address: "12 rue de la montagne",
     place: "Paris",
     phone: "01 23 45 67 89",
-    email: "restaurant@montagne.com",
+    email: "restaurant@pti-dej.com",
     stars: "🌟🌟"
   },
   {
@@ -64,7 +64,7 @@ const restaurants = [
     address: "12 rue de la montagne",
     place: "Paris",
     phone: "01 23 45 67 89",
-    email: "restaurant@montagne.com",
+    email: "restaurant@lajungle.com",
     stars: "🌟"
   },
   {
@@ -74,7 +74,7 @@ const restaurants = [
     address: "12 rue de la montagne",
     place: "Paris",
     phone: "01 23 45 67 89",
-    email: "restaurant@montagne.com",
+    email: "restaurant@pinotNoir.com",
     stars: "🌟🌟🌟"
   }
 ];
