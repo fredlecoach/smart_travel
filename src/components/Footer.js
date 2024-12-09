@@ -1,7 +1,8 @@
 import '../styles/Footer.css'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
-const StyledA = styled.a`text-decoration: none; color: white;
+const StyledLink = styled.Link`text-decoration: none; color: white;
   &:hover{
   color: red
   }
@@ -26,7 +27,7 @@ export default function Footer(){
           {/* lien restaurants */}
       <div className="col d-flex justify-content-center flex-column text-center">
         <h5>Nos bonnes adresses <i class="bi bi-compass"></i></h5>
-        <StyledA href="/restaurants" className='text-decoration-none'>Nos restaurants <i class="bi bi-map"></i></StyledA>
+        <StyledLink to="/restaurants" >Nos restaurants <i class="bi bi-map"></i></StyledLink>
       </div>
     </div>
     
